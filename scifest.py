@@ -11,14 +11,12 @@ from mcpi import minecraft, block
 mc = minecraft.Minecraft.create()
 mc.postToChat("SciFest demo initialized.")
 
-print 'Done'
-
 max_to_clear = 0
 start_x = -80
-mc.player.setPos(start_x, 10, 10)
 
 while True:
 	input = raw_input('Write your name and hit <Enter>: ')
+	mc.player.setPos(start_x + 10, 10, 10)
 	p_x = start_x
 	for text in input.split():
 		pattern = f.renderText(text)
