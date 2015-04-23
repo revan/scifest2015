@@ -26,7 +26,7 @@ while True:
 		length = len(rows[0])
 
 		# clear space
-		max_to_clear = max(max_to_clear, p_x - start_x)
+		max_to_clear = max(max_to_clear, p_x + length - start_x)
 		mc.setBlocks(p_x,0,0, p_x + max_to_clear, height, 20, block.AIR.id)
 
 		# frame
